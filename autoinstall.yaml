@@ -5,7 +5,7 @@ autoinstall:
     realname: 'Enzo Kniggendorf'
     hostname: kniggendorfpc
     username: kniggendorf
-    no-password: true 
+    password: '$y$j9T$uhkxlm8nUQaNu.6rl4k2d.$DIldpYy96OHg8lFjfXfc671BZcGWkPOmaDONGAhGSg3'
   locale: pt_BR.utf8
   keyboard:
     layout: br
