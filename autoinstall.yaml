@@ -1,0 +1,32 @@
+#cloud-config
+autoinstall:
+  version: 1
+  identity:
+    realname: 'Enzo Kniggendorf'
+    hostname: kniggendorfpc
+    username: kniggendorf
+    password: '$6$rounds=5000$V4C6u0n4QDVp1iN4$0G1IHTiP4i8WkW.ZTz4D5pIUN3BZ6J.q9s26rUFhXRWsO6NqHvFrx1x29fzFGLzRQ3DXKj6U9XuLZJ8o.LHlA.'
+  locale: pt_BR.utf8
+  keyboard:
+    layout: br
+  timezone: "America/Sao_Paulo"
+  packages:
+    - gimp
+    - git
+    - wget
+  snaps:
+    - name: code
+      channel: stable
+      classic: true
+    - name: brave
+      channel: stable
+      classic: false
+    - name: discord
+      channel: stable
+      classic: false
+  codecs:
+    install: true
+  drivers:
+    install: true
+  updates: all
+  shutdown: reboot
