@@ -14,19 +14,17 @@ autoinstall:
     - gimp
     - git
     - wget
-  snaps:
-    - name: code
-      channel: stable
-      classic: true
-    - name: brave
-      channel: stable
-      classic: false
-    - name: discord
-      channel: stable
-      classic: false
+    - code
+    - flatpak
+  runcmd:
+    - flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    - flatpak install -y flathub com.brave.Browser
+    - flatpak install -y flathub com.discordapp.Discord
+    - flatpak install -y flathub com.spotify.Client
   codecs:
     install: true
   drivers:
     install: true
   updates: all
-  shutdown: reboot
+  shutdown:
+    prompt: true
